@@ -1,0 +1,59 @@
+{
+  "category": "train_designation",
+  "title_ru": "Сигналы обозначения поездов",
+  "title_en": "Train designation signals",
+  "icon": "Tags",
+  "groups": [
+    {
+      "id": "head",
+      "category": "train_designation",
+      "title_ru": "Сигналы головы поезда",
+      "title_en": "Head-of-train signals",
+      "icon": "ChevronsUp",
+      "summary_ru": "Раздел «Сигналы головы поезда». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "head-1",
+          "title_ru": "Сигналы головы поезда",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "category": "train_designation",
+      "title_ru": "Сигналы хвоста поезда",
+      "title_en": "End-of-train signals",
+      "icon": "ChevronsDown",
+      "summary_ru": "Раздел «Сигналы хвоста поезда». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "end-1",
+          "title_ru": "Сигналы хвоста поезда",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "category": "train_designation",
+      "title_ru": "Специальные сигналы",
+      "title_en": "Special-purpose signals",
+      "icon": "Star",
+      "summary_ru": "Раздел «Специальные сигналы». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "special-1",
+          "title_ru": "Специальные сигналы",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

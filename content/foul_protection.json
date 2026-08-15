@@ -1,0 +1,182 @@
+{
+  "category": "foul_protection",
+  "title_ru": "Ограждение опасных мест",
+  "title_en": "Foul protection",
+  "icon": "ShieldAlert",
+  "groups": [
+    {
+      "id": "stop_whistle_c",
+      "category": "foul_protection",
+      "title_ru": "Ограждение сигнальными знаками «С»",
+      "title_en": "Stop-whistle sign \"C\"",
+      "icon": "Octagon",
+      "summary_ru": "Раздел «Ограждение сигнальными знаками «С»». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "stop_whistle_c-1",
+          "title_ru": "Ограждение сигнальными знаками «С»",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "speed_reduction",
+      "category": "foul_protection",
+      "title_ru": "Ограждение сигналами уменьшения скорости",
+      "title_en": "Speed-reduction protection",
+      "icon": "Gauge",
+      "summary_ru": "Раздел «Ограждение сигналами уменьшения скорости». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "speed_reduction-1",
+          "title_ru": "Ограждение сигналами уменьшения скорости",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "stop_signal",
+      "category": "foul_protection",
+      "title_ru": "Ограждение сигналами остановки",
+      "title_en": "Stop-signal protection",
+      "icon": "Square",
+      "summary_ru": "Раздел «Ограждение сигналами остановки». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "stop_signal-1",
+          "title_ru": "Ограждение сигналами остановки",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "sudden_obstruction",
+      "category": "foul_protection",
+      "title_ru": "Ограждение мест внезапно возникшего препятствия",
+      "title_en": "Sudden-obstruction protection",
+      "icon": "AlertTriangle",
+      "summary_ru": "Раздел «Ограждение мест внезапно возникшего препятствия». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "sudden_obstruction-1",
+          "title_ru": "Ограждение мест внезапно возникшего препятствия",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "rolling_open_line",
+      "category": "foul_protection",
+      "title_ru": "Ограждение подвижного состава на перегоне",
+      "title_en": "Rolling-stock protection (open line)",
+      "icon": "Train",
+      "summary_ru": "Раздел «Ограждение подвижного состава на перегоне». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "rolling_open_line-1",
+          "title_ru": "Ограждение подвижного состава на перегоне",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "rolling_station",
+      "category": "foul_protection",
+      "title_ru": "Ограждение подвижного состава на станции",
+      "title_en": "Rolling-stock protection (station)",
+      "icon": "Building2",
+      "summary_ru": "Раздел «Ограждение подвижного состава на станции». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "rolling_station-1",
+          "title_ru": "Ограждение подвижного состава на станции",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "conductor_required",
+      "category": "foul_protection",
+      "title_ru": "Места, проходимые только с проводником",
+      "title_en": "Conductor-required sections",
+      "icon": "UserCheck",
+      "summary_ru": "Раздел «Места, проходимые только с проводником». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "conductor_required-1",
+          "title_ru": "Места, проходимые только с проводником",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "artificial_structures",
+      "category": "foul_protection",
+      "title_ru": "Особенности ограждения на искусственных сооружениях",
+      "title_en": "Protection on bridges/tunnels",
+      "icon": "Building2",
+      "summary_ru": "Раздел «Особенности ограждения на искусственных сооружениях». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "artificial_structures-1",
+          "title_ru": "Особенности ограждения на искусственных сооружениях",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "people_equipment",
+      "category": "foul_protection",
+      "title_ru": "Лица и средства ограждения",
+      "title_en": "People and equipment",
+      "icon": "Users",
+      "summary_ru": "Раздел «Лица и средства ограждения». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "people_equipment-1",
+          "title_ru": "Сигналист (день)",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "people_equipment-2",
+          "title_ru": "Сигналист (ночь)",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "people_equipment-3",
+          "title_ru": "Петарды",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "people_equipment-4",
+          "title_ru": "Ручной фонарь",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

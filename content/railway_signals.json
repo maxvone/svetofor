@@ -1,0 +1,408 @@
+{
+  "category": "railway_signals",
+  "title_ru": "Светофоры",
+  "title_en": "Railway signals",
+  "icon": "TrafficCone",
+  "groups": [
+    {
+      "id": "vhodnoy",
+      "category": "railway_signals",
+      "title_ru": "Входной",
+      "title_en": "Home signal",
+      "icon": "Circle",
+      "itemCount": 19,
+      "summary_ru": "Раздел «Входной». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "vhodnoy-1",
+          "title_ru": "Входной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "vhodnoy-2",
+          "title_ru": "Входной — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "vyhodnoy",
+      "category": "railway_signals",
+      "title_ru": "Выходной",
+      "title_en": "Starting signal",
+      "icon": "CircleDot",
+      "itemCount": 31,
+      "summary_ru": "Раздел «Выходной». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "vyhodnoy-1",
+          "title_ru": "Выходной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "vyhodnoy-2",
+          "title_ru": "Выходной — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "marshrutnyy",
+      "category": "railway_signals",
+      "title_ru": "Маршрутный",
+      "title_en": "Route signal",
+      "icon": "Route",
+      "itemCount": 16,
+      "summary_ru": "Раздел «Маршрутный». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "marshrutnyy-1",
+          "title_ru": "Маршрутный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "marshrutnyy-2",
+          "title_ru": "Маршрутный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "priglasitelnyy",
+      "category": "railway_signals",
+      "title_ru": "Пригласительный",
+      "title_en": "Call-on signal",
+      "icon": "Bell",
+      "itemCount": 2,
+      "summary_ru": "Раздел «Пригласительный». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "priglasitelnyy-1",
+          "title_ru": "Пригласительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "priglasitelnyy-2",
+          "title_ru": "Пригласительный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "prohodnoy",
+      "category": "railway_signals",
+      "title_ru": "Проходной",
+      "title_en": "Intermediate signal",
+      "icon": "Minus",
+      "itemCount": 13,
+      "summary_ru": "Раздел «Проходной». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "prohodnoy-1",
+          "title_ru": "Проходной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "prohodnoy-2",
+          "title_ru": "Проходной — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "svetofor_prikrytiya",
+      "category": "railway_signals",
+      "title_ru": "Светофор прикрытия",
+      "title_en": "Protecting signal",
+      "icon": "Shield",
+      "itemCount": 2,
+      "summary_ru": "Раздел «Светофор прикрытия». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "svetofor_prikrytiya-1",
+          "title_ru": "Светофор прикрытия — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "svetofor_prikrytiya-2",
+          "title_ru": "Светофор прикрытия — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "zagraditelnyy",
+      "category": "railway_signals",
+      "title_ru": "Заградительный",
+      "title_en": "Blocking signal",
+      "icon": "Octagon",
+      "itemCount": 2,
+      "summary_ru": "Раздел «Заградительный». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "zagraditelnyy-1",
+          "title_ru": "Заградительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "zagraditelnyy-2",
+          "title_ru": "Заградительный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "predupreditelnyy",
+      "category": "railway_signals",
+      "title_ru": "Предупредительный",
+      "title_en": "Distant signal",
+      "icon": "Triangle",
+      "itemCount": 5,
+      "summary_ru": "Раздел «Предупредительный». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "predupreditelnyy-1",
+          "title_ru": "Предупредительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "predupreditelnyy-2",
+          "title_ru": "Предупредительный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "povtoritelnyy",
+      "category": "railway_signals",
+      "title_ru": "Повторительный",
+      "title_en": "Repeater signal",
+      "icon": "Copy",
+      "itemCount": 3,
+      "summary_ru": "Раздел «Повторительный». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "povtoritelnyy-1",
+          "title_ru": "Повторительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "povtoritelnyy-2",
+          "title_ru": "Повторительный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "lokomotivnyy",
+      "category": "railway_signals",
+      "title_ru": "Локомотивный",
+      "title_en": "Cab signal",
+      "icon": "Train",
+      "summary_ru": "Локомотивная сигнализация в кабине. Не является путевым светофором. Требует сверки с Инструкцией по сигнализации.",
+      "items": [
+        {
+          "id": "lokomotivnyy-1",
+          "title_ru": "Локомотивный",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "vyezdnoy",
+      "category": "railway_signals",
+      "title_ru": "Въездной (выездной)",
+      "title_en": "Entry (exit) signal",
+      "icon": "LogIn",
+      "itemCount": 2,
+      "summary_ru": "Раздел «Въездной (выездной)». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "vyezdnoy-1",
+          "title_ru": "Въездной (выездной) — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "vyezdnoy-2",
+          "title_ru": "Въездной (выездной) — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "tekhnologicheskiy",
+      "category": "railway_signals",
+      "title_ru": "Технологический",
+      "title_en": "Industrial signal",
+      "icon": "Factory",
+      "itemCount": 4,
+      "summary_ru": "Раздел «Технологический». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "tekhnologicheskiy-1",
+          "title_ru": "Технологический — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "tekhnologicheskiy-2",
+          "title_ru": "Технологический — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "manevrovyy",
+      "category": "railway_signals",
+      "title_ru": "Маневровый",
+      "title_en": "Shunting signal",
+      "icon": "Shuffle",
+      "itemCount": 3,
+      "summary_ru": "Раздел «Маневровый». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "manevrovyy-1",
+          "title_ru": "Маневровый — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "manevrovyy-2",
+          "title_ru": "Маневровый — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "gorochnyy",
+      "category": "railway_signals",
+      "title_ru": "Горочный",
+      "title_en": "Hump signal",
+      "icon": "TrendingUp",
+      "itemCount": 7,
+      "summary_ru": "Светофоры горочной автоматической централизации на сортировочных станциях. Значения показаний — по Инструкции (требует сверки).",
+      "items": [
+        {
+          "id": "gorochnyy-1",
+          "title_ru": "Горочный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "gorochnyy-2",
+          "title_ru": "Горочный — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "nedeystvuyushchiy",
+      "category": "railway_signals",
+      "title_ru": "Недействующий",
+      "title_en": "Signal not in use",
+      "icon": "CircleOff",
+      "summary_ru": "Светофоры, не используемые для текущей организации движения (временно или постоянно). Порядок оформления — по Инструкции (требует сверки).",
+      "items": [
+        {
+          "id": "nedeystvuyushchiy-1",
+          "title_ru": "Недействующий светофор",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "semafor",
+      "category": "railway_signals",
+      "title_ru": "Семафор",
+      "title_en": "Semaphore signal",
+      "icon": "Flag",
+      "summary_ru": "Раздел «Семафор». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "semafor-1",
+          "title_ru": "Действующий семафор",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "semafor-2",
+          "title_ru": "Недействующий семафор",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "pereezdnoy",
+      "category": "railway_signals",
+      "title_ru": "Переездной",
+      "title_en": "Level crossing signal",
+      "icon": "AlertTriangle",
+      "summary_ru": "Справочник цветов и значений сигналов переездного светофора. Требует сверки с Инструкцией по сигнализации.",
+      "items": [
+        {
+          "id": "pereezdnoy-1",
+          "title_ru": "Справочник сигналов переезда",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

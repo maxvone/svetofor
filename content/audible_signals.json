@@ -1,0 +1,108 @@
+{
+  "category": "audible_signals",
+  "title_ru": "Звуковые сигналы",
+  "title_en": "Audible signals",
+  "icon": "Volume2",
+  "groups": [
+    {
+      "id": "alarm",
+      "category": "audible_signals",
+      "title_ru": "Сигналы тревоги",
+      "title_en": "Alarm signals",
+      "icon": "Siren",
+      "itemCount": 4,
+      "summary_ru": "Раздел «Сигналы тревоги». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "alarm-1",
+          "title_ru": "Сигналы тревоги — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "alarm-2",
+          "title_ru": "Сигналы тревоги — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "category": "audible_signals",
+      "title_ru": "Общие сигналы",
+      "title_en": "General signals",
+      "icon": "Megaphone",
+      "itemCount": 9,
+      "summary_ru": "Раздел «Общие сигналы». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "general-1",
+          "title_ru": "Общие сигналы — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "general-2",
+          "title_ru": "Общие сигналы — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "double_heading",
+      "category": "audible_signals",
+      "title_ru": "Следование двойной тягой",
+      "title_en": "Double heading",
+      "icon": "Users",
+      "itemCount": 3,
+      "summary_ru": "Раздел «Следование двойной тягой». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "double_heading-1",
+          "title_ru": "Следование двойной тягой — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "double_heading-2",
+          "title_ru": "Следование двойной тягой — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "pusher",
+      "category": "audible_signals",
+      "title_ru": "Следование с подталкивающим локомотивом",
+      "title_en": "Pusher operation",
+      "icon": "TrainFront",
+      "itemCount": 3,
+      "summary_ru": "Раздел «Следование с подталкивающим локомотивом». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "pusher-1",
+          "title_ru": "Следование с подталкивающим локомотивом — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "pusher-2",
+          "title_ru": "Следование с подталкивающим локомотивом — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

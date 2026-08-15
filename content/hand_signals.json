@@ -1,0 +1,93 @@
+{
+  "category": "hand_signals",
+  "title_ru": "Ручные сигналы",
+  "title_en": "Hand signals",
+  "icon": "Hand",
+  "groups": [
+    {
+      "id": "stop",
+      "category": "hand_signals",
+      "title_ru": "Остановка",
+      "title_en": "Stop",
+      "icon": "HandMetal",
+      "summary_ru": "Раздел «Остановка». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "stop-1",
+          "title_ru": "Остановка",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "proceed",
+      "category": "hand_signals",
+      "title_ru": "Следование",
+      "title_en": "Proceed",
+      "icon": "ArrowRight",
+      "summary_ru": "Раздел «Следование». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "proceed-1",
+          "title_ru": "Следование",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "speed",
+      "category": "hand_signals",
+      "title_ru": "Контроль скорости",
+      "title_en": "Speed control",
+      "icon": "Gauge",
+      "summary_ru": "Раздел «Контроль скорости». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "speed-1",
+          "title_ru": "Контроль скорости",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "shunting",
+      "category": "hand_signals",
+      "title_ru": "Маневровые",
+      "title_en": "Shunting",
+      "icon": "Shuffle",
+      "summary_ru": "Раздел «Маневровые». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "shunting-1",
+          "title_ru": "Маневровые",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "auxiliary",
+      "category": "hand_signals",
+      "title_ru": "Вспомогательные",
+      "title_en": "Auxiliary signals",
+      "icon": "Plus",
+      "summary_ru": "Раздел «Вспомогательные». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "auxiliary-1",
+          "title_ru": "Вспомогательные",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

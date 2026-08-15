@@ -1,0 +1,170 @@
+{
+  "category": "metro_signals",
+  "title_ru": "Светофоры метрополитена",
+  "title_en": "Metro signals",
+  "icon": "TrainFront",
+  "groups": [
+    {
+      "id": "vhodnoy",
+      "category": "metro_signals",
+      "title_ru": "Входной",
+      "title_en": "Home",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Входной». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "vhodnoy-1",
+          "title_ru": "Входной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "vyhodnoy",
+      "category": "metro_signals",
+      "title_ru": "Выходной",
+      "title_en": "Starting",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Выходной». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "vyhodnoy-1",
+          "title_ru": "Выходной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "prohodnoy",
+      "category": "metro_signals",
+      "title_ru": "Проходной",
+      "title_en": "Intermediate",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Проходной». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "prohodnoy-1",
+          "title_ru": "Проходной — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "manevrovyy",
+      "category": "metro_signals",
+      "title_ru": "Маневровый",
+      "title_en": "Shunting",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Маневровый». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "manevrovyy-1",
+          "title_ru": "Маневровый — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "povtoritelnyy",
+      "category": "metro_signals",
+      "title_ru": "Повторительный",
+      "title_en": "Repeater",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Повторительный». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "povtoritelnyy-1",
+          "title_ru": "Повторительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "rezervnyy",
+      "category": "metro_signals",
+      "title_ru": "Резервный",
+      "title_en": "Spare",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Резервный». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "rezervnyy-1",
+          "title_ru": "Резервный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "predupreditelnyy",
+      "category": "metro_signals",
+      "title_ru": "Предупредительный",
+      "title_en": "Distant",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Предупредительный». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "predupreditelnyy-1",
+          "title_ru": "Предупредительный — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "prikrytiya",
+      "category": "metro_signals",
+      "title_ru": "Прикрытия",
+      "title_en": "Protection",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «Прикрытия». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "prikrytiya-1",
+          "title_ru": "Прикрытия — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "ats_als",
+      "category": "metro_signals",
+      "title_ru": "АТС-АЛС",
+      "title_en": "ATS-ASC",
+      "icon": "Circle",
+      "itemCount": 1,
+      "summary_ru": "Раздел «АТС-АЛС». Категория светофоров метрополитена. Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "ats_als-1",
+          "title_ru": "АТС-АЛС — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}

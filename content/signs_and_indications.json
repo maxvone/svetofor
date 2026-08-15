@@ -1,0 +1,133 @@
+{
+  "category": "signs_and_indications",
+  "title_ru": "Знаки и указатели",
+  "title_en": "Signs and indications",
+  "icon": "Signpost",
+  "groups": [
+    {
+      "id": "portable",
+      "category": "signs_and_indications",
+      "title_ru": "Переносные сигнальные знаки",
+      "title_en": "Portable signal signs",
+      "icon": "Hand",
+      "itemCount": 8,
+      "summary_ru": "Раздел «Переносные сигнальные знаки». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "portable-1",
+          "title_ru": "Переносные сигнальные знаки — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "portable-2",
+          "title_ru": "Переносные сигнальные знаки — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "permanent",
+      "category": "signs_and_indications",
+      "title_ru": "Постоянные сигнальные знаки",
+      "title_en": "Permanent signal signs",
+      "icon": "MapPin",
+      "itemCount": 18,
+      "summary_ru": "Раздел «Постоянные сигнальные знаки». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "permanent-1",
+          "title_ru": "Постоянные сигнальные знаки — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "permanent-2",
+          "title_ru": "Постоянные сигнальные знаки — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "temporary",
+      "category": "signs_and_indications",
+      "title_ru": "Временные сигнальные знаки",
+      "title_en": "Temporary signal signs",
+      "icon": "Clock",
+      "itemCount": 6,
+      "summary_ru": "Раздел «Временные сигнальные знаки». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "temporary-1",
+          "title_ru": "Временные сигнальные знаки — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "temporary-2",
+          "title_ru": "Временные сигнальные знаки — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "indicators",
+      "category": "signs_and_indications",
+      "title_ru": "Сигнальные указатели",
+      "title_en": "Signal boards/indicators",
+      "icon": "PanelTop",
+      "itemCount": 8,
+      "summary_ru": "Раздел «Сигнальные указатели». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "indicators-1",
+          "title_ru": "Сигнальные указатели — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "indicators-2",
+          "title_ru": "Сигнальные указатели — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    },
+    {
+      "id": "warning",
+      "category": "signs_and_indications",
+      "title_ru": "Постоянные предупредительные знаки",
+      "title_en": "Permanent warning signs",
+      "icon": "AlertCircle",
+      "itemCount": 9,
+      "summary_ru": "Раздел «Постоянные предупредительные знаки». Значения и правила применения — по Инструкции по сигнализации (требует сверки).",
+      "items": [
+        {
+          "id": "warning-1",
+          "title_ru": "Постоянные предупредительные знаки — вариант 1",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        },
+        {
+          "id": "warning-2",
+          "title_ru": "Постоянные предупредительные знаки — вариант 2",
+          "shortDescription_ru": "Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).",
+          "fullDescription_ru": "",
+          "regulationRef": ""
+        }
+      ]
+    }
+  ]
+}
