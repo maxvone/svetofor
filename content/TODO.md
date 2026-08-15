@@ -16,6 +16,10 @@ Official text imported from Инструкция по сигнализации (
 
 Official text from гл. VI (п. 58–78) via `scripts/data/signs-and-indications-official.mjs`. 49 items, 0 placeholders.
 
+## Audible signals — DONE (2026-08-15)
+
+Official text from гл. VIII (п. 96–106) via `scripts/data/audible-signals-official.mjs`. 37 items, 0 placeholders.
+
 ## Known issues from source brochures
 
 - **Горочный / Недействующий**: brochure duplicate text — verify independently before shipping.

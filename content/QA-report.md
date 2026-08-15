@@ -1,12 +1,12 @@
 # Content QA report
 
-Generated: 2026-08-15T16:28:20.636Z
+Generated: 2026-08-15T16:32:46.436Z
 
 ## Category stats
 
 | Category | Groups | Seeded items | Placeholder items |
 |---|---:|---:|---:|
-| audible_signals | 4 | 8 | 8 |
+| audible_signals | 4 | 37 | 0 |
 | foul_protection | 9 | 12 | 12 |
 | hand_signals | 5 | 5 | 5 |
 | metro_signals | 9 | 9 | 9 |
@@ -14,17 +14,8 @@ Generated: 2026-08-15T16:28:20.636Z
 | signs_and_indications | 5 | 49 | 0 |
 | train_designation | 3 | 3 | 3 |
 
-## Findings (10)
+## Findings (1)
 
-- [audible_signals] seeded 8 items; brochure lists 37 total (expand before shipping)
-- [audible_signals/alarm] seeded 2/4 variants (expected until content import)
-- [audible_signals/alarm] all variants share placeholder description
-- [audible_signals/general] seeded 2/9 variants (expected until content import)
-- [audible_signals/general] all variants share placeholder description
-- [audible_signals/double_heading] seeded 2/3 variants (expected until content import)
-- [audible_signals/double_heading] all variants share placeholder description
-- [audible_signals/pusher] seeded 2/3 variants (expected until content import)
-- [audible_signals/pusher] all variants share placeholder description
 - [foul_protection/people_equipment] all variants share placeholder description
 
 ## Next steps

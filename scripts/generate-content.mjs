@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildAudibleGroups } from './data/audible-signals-official.mjs';
 import { buildRailwayGroups } from './data/railway-signals-official.mjs';
 import { buildSignsGroups } from './data/signs-and-indications-official.mjs';
 
@@ -190,12 +191,7 @@ const files = {
     title_ru: 'Звуковые сигналы',
     title_en: 'Audible signals',
     icon: 'Volume2',
-    groups: [
-      group('audible_signals', 'alarm', 'Сигналы тревоги', 'Alarm signals', 'Siren', 4),
-      group('audible_signals', 'general', 'Общие сигналы', 'General signals', 'Megaphone', 9),
-      group('audible_signals', 'double_heading', 'Следование двойной тягой', 'Double heading', 'Users', 3),
-      group('audible_signals', 'pusher', 'Следование с подталкивающим локомотивом', 'Pusher operation', 'TrainFront', 3),
-    ],
+    groups: buildAudibleGroups(),
   },
 };
 
@@ -224,6 +220,10 @@ Official text imported from Инструкция по сигнализации (
 ## Signs & indicators — DONE (2026-08-15)
 
 Official text from гл. VI (п. 58–78) via \`scripts/data/signs-and-indications-official.mjs\`. 49 items, 0 placeholders.
+
+## Audible signals — DONE (2026-08-15)
+
+Official text from гл. VIII (п. 96–106) via \`scripts/data/audible-signals-official.mjs\`. 37 items, 0 placeholders.
 
 ## Known issues from source brochures
 
