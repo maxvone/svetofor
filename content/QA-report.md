@@ -1,22 +1,22 @@
 # Content QA report
 
-Generated: 2026-08-15T16:32:46.436Z
+Generated: 2026-08-15T16:41:40.982Z
 
 ## Category stats
 
 | Category | Groups | Seeded items | Placeholder items |
 |---|---:|---:|---:|
 | audible_signals | 4 | 37 | 0 |
-| foul_protection | 9 | 12 | 12 |
-| hand_signals | 5 | 5 | 5 |
-| metro_signals | 9 | 9 | 9 |
+| foul_protection | 9 | 34 | 0 |
+| hand_signals | 5 | 19 | 0 |
+| metro_signals | 9 | 42 | 0 |
 | railway_signals | 17 | 85 | 0 |
 | signs_and_indications | 5 | 49 | 0 |
-| train_designation | 3 | 3 | 3 |
+| train_designation | 3 | 16 | 0 |
 
-## Findings (1)
+## Findings (0)
 
-- [foul_protection/people_equipment] all variants share placeholder description
+- No blocking issues
 
 ## Next steps
 

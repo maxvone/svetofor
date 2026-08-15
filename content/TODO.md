@@ -18,12 +18,27 @@ Official text from гл. VI (п. 58–78) via `scripts/data/signs-and-indication
 
 ## Audible signals — DONE (2026-08-15)
 
-Official text from гл. VIII (п. 96–106) via `scripts/data/audible-signals-official.mjs`. 37 items, 0 placeholders.
+Official text from гл. IX–X (п. 96–106) via `scripts/data/audible-signals-official.mjs`. 37 items, 0 placeholders.
+
+## Foul protection — DONE (2026-08-15)
+
+Official text from гл. IV (п. 40–58) via `scripts/data/foul-protection-official.mjs`. 34 items, 0 placeholders.
+
+## Hand signals — DONE (2026-08-15)
+
+Official text from гл. V (п. 59–66) и маневровые п. 91 via `scripts/data/hand-signals-official.mjs`. 19 items, 0 placeholders.
+
+## Train designation — DONE (2026-08-15)
+
+Official text from гл. VIII (п. 93–103) via `scripts/data/train-designation-official.mjs`. 16 items, 0 placeholders.
+
+## Metro signals — DONE (2026-08-15)
+
+Official text from Инструкции по сигнализации на метрополитенах РФ via `scripts/data/metro-signals-official.mjs`. 42 items, 0 placeholders. Separate source from main ПТЭ instruction.
 
 ## Known issues from source brochures
 
 - **Горочный / Недействующий**: brochure duplicate text — verify independently before shipping.
-- **Metro signals**: no metro-specific PDF in source set — needs separate authoritative review.
 - **Audible signals**: v1 uses text/diagram representation only (no audio playback).
 
 ## Count sanity checks (from brochures)

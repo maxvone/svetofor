@@ -2,50 +2,15 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildAudibleGroups } from './data/audible-signals-official.mjs';
+import { buildFoulProtectionGroups } from './data/foul-protection-official.mjs';
+import { buildHandSignalsGroups } from './data/hand-signals-official.mjs';
+import { buildMetroSignalsGroups } from './data/metro-signals-official.mjs';
 import { buildRailwayGroups } from './data/railway-signals-official.mjs';
 import { buildSignsGroups } from './data/signs-and-indications-official.mjs';
+import { buildTrainDesignationGroups } from './data/train-designation-official.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, '..', 'content');
-
-const ITEM_PLACEHOLDER =
-  'Полное описание и значения показаний будут добавлены после сверки с Инструкцией по сигнализации (Прил. №1 к ПТЭ).';
-
-function defaultSummary(titleRu, scopeNote = '') {
-  const scope = scopeNote ? ` ${scopeNote}` : '';
-  return `Раздел «${titleRu}».${scope} Значения и правила применения — по Инструкции по сигнализации (требует сверки).`;
-}
-
-function item(groupId, index, title) {
-  return {
-    id: `${groupId}-${index}`,
-    title_ru: title ?? `Вариант ${index}`,
-    shortDescription_ru: ITEM_PLACEHOLDER,
-    fullDescription_ru: '',
-    regulationRef: '',
-  };
-}
-
-function group(category, id, title_ru, title_en, icon, itemCount, itemTitles, summary_ru) {
-  const items = itemTitles
-    ? itemTitles.map((t, i) => item(id, i + 1, t))
-    : itemCount
-      ? Array.from({ length: Math.min(itemCount, 2) }, (_, i) =>
-          item(id, i + 1, `${title_ru} — вариант ${i + 1}`)
-        )
-      : [item(id, 1, title_ru)];
-
-  return {
-    id,
-    category,
-    title_ru,
-    title_en,
-    icon,
-    itemCount,
-    summary_ru: summary_ru ?? defaultSummary(title_ru),
-    items,
-  };
-}
 
 const files = {
   railway_signals: {
@@ -60,39 +25,7 @@ const files = {
     title_ru: 'Светофоры метрополитена',
     title_en: 'Metro signals',
     icon: 'TrainFront',
-    groups: [
-      'vhodnoy',
-      'vyhodnoy',
-      'prohodnoy',
-      'manevrovyy',
-      'povtoritelnyy',
-      'rezervnyy',
-      'predupreditelnyy',
-      'prikrytiya',
-      'ats_als',
-    ].map((id, i) => {
-      const titles = [
-        ['Входной', 'Home'],
-        ['Выходной', 'Starting'],
-        ['Проходной', 'Intermediate'],
-        ['Маневровый', 'Shunting'],
-        ['Повторительный', 'Repeater'],
-        ['Резервный', 'Spare'],
-        ['Предупредительный', 'Distant'],
-        ['Прикрытия', 'Protection'],
-        ['АТС-АЛС', 'ATS-ASC'],
-      ][i];
-      return group(
-        'metro_signals',
-        id,
-        titles[0],
-        titles[1],
-        'Circle',
-        1,
-        undefined,
-        defaultSummary(titles[0], 'Категория светофоров метрополитена.')
-      );
-    }),
+    groups: buildMetroSignalsGroups(),
   },
   signs_and_indications: {
     category: 'signs_and_indications',
@@ -106,85 +39,21 @@ const files = {
     title_ru: 'Ограждение опасных мест',
     title_en: 'Foul protection',
     icon: 'ShieldAlert',
-    groups: [
-      group('foul_protection', 'stop_whistle_c', 'Ограждение сигнальными знаками «С»', 'Stop-whistle sign "C"', 'Octagon'),
-      group(
-        'foul_protection',
-        'speed_reduction',
-        'Ограждение сигналами уменьшения скорости',
-        'Speed-reduction protection',
-        'Gauge'
-      ),
-      group('foul_protection', 'stop_signal', 'Ограждение сигналами остановки', 'Stop-signal protection', 'Square'),
-      group(
-        'foul_protection',
-        'sudden_obstruction',
-        'Ограждение мест внезапно возникшего препятствия',
-        'Sudden-obstruction protection',
-        'AlertTriangle'
-      ),
-      group(
-        'foul_protection',
-        'rolling_open_line',
-        'Ограждение подвижного состава на перегоне',
-        'Rolling-stock protection (open line)',
-        'Train'
-      ),
-      group(
-        'foul_protection',
-        'rolling_station',
-        'Ограждение подвижного состава на станции',
-        'Rolling-stock protection (station)',
-        'Building2'
-      ),
-      group(
-        'foul_protection',
-        'conductor_required',
-        'Места, проходимые только с проводником',
-        'Conductor-required sections',
-        'UserCheck'
-      ),
-      group(
-        'foul_protection',
-        'artificial_structures',
-        'Особенности ограждения на искусственных сооружениях',
-        'Protection on bridges/tunnels',
-        'Building2'
-      ),
-      group(
-        'foul_protection',
-        'people_equipment',
-        'Лица и средства ограждения',
-        'People and equipment',
-        'Users',
-        undefined,
-        ['Сигналист (день)', 'Сигналист (ночь)', 'Петарды', 'Ручной фонарь']
-      ),
-    ],
+    groups: buildFoulProtectionGroups(),
   },
   train_designation: {
     category: 'train_designation',
     title_ru: 'Сигналы обозначения поездов',
     title_en: 'Train designation signals',
     icon: 'Tags',
-    groups: [
-      group('train_designation', 'head', 'Сигналы головы поезда', 'Head-of-train signals', 'ChevronsUp'),
-      group('train_designation', 'end', 'Сигналы хвоста поезда', 'End-of-train signals', 'ChevronsDown'),
-      group('train_designation', 'special', 'Специальные сигналы', 'Special-purpose signals', 'Star'),
-    ],
+    groups: buildTrainDesignationGroups(),
   },
   hand_signals: {
     category: 'hand_signals',
     title_ru: 'Ручные сигналы',
     title_en: 'Hand signals',
     icon: 'Hand',
-    groups: [
-      group('hand_signals', 'stop', 'Остановка', 'Stop', 'HandMetal'),
-      group('hand_signals', 'proceed', 'Следование', 'Proceed', 'ArrowRight'),
-      group('hand_signals', 'speed', 'Контроль скорости', 'Speed control', 'Gauge'),
-      group('hand_signals', 'shunting', 'Маневровые', 'Shunting', 'Shuffle'),
-      group('hand_signals', 'auxiliary', 'Вспомогательные', 'Auxiliary signals', 'Plus'),
-    ],
+    groups: buildHandSignalsGroups(),
   },
   audible_signals: {
     category: 'audible_signals',
@@ -223,12 +92,27 @@ Official text from гл. VI (п. 58–78) via \`scripts/data/signs-and-indicatio
 
 ## Audible signals — DONE (2026-08-15)
 
-Official text from гл. VIII (п. 96–106) via \`scripts/data/audible-signals-official.mjs\`. 37 items, 0 placeholders.
+Official text from гл. IX–X (п. 96–106) via \`scripts/data/audible-signals-official.mjs\`. 37 items, 0 placeholders.
+
+## Foul protection — DONE (2026-08-15)
+
+Official text from гл. IV (п. 40–58) via \`scripts/data/foul-protection-official.mjs\`. 34 items, 0 placeholders.
+
+## Hand signals — DONE (2026-08-15)
+
+Official text from гл. V (п. 59–66) и маневровые п. 91 via \`scripts/data/hand-signals-official.mjs\`. 19 items, 0 placeholders.
+
+## Train designation — DONE (2026-08-15)
+
+Official text from гл. VIII (п. 93–103) via \`scripts/data/train-designation-official.mjs\`. 16 items, 0 placeholders.
+
+## Metro signals — DONE (2026-08-15)
+
+Official text from Инструкции по сигнализации на метрополитенах РФ via \`scripts/data/metro-signals-official.mjs\`. 42 items, 0 placeholders. Separate source from main ПТЭ instruction.
 
 ## Known issues from source brochures
 
 - **Горочный / Недействующий**: brochure duplicate text — verify independently before shipping.
-- **Metro signals**: no metro-specific PDF in source set — needs separate authoritative review.
 - **Audible signals**: v1 uses text/diagram representation only (no audio playback).
 
 ## Count sanity checks (from brochures)
