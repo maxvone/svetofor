@@ -1,6 +1,6 @@
 # Content QA report
 
-Generated: 2026-08-15T16:24:34.872Z
+Generated: 2026-08-15T16:28:20.636Z
 
 ## Category stats
 
@@ -11,10 +11,10 @@ Generated: 2026-08-15T16:24:34.872Z
 | hand_signals | 5 | 5 | 5 |
 | metro_signals | 9 | 9 | 9 |
 | railway_signals | 17 | 85 | 0 |
-| signs_and_indications | 5 | 10 | 10 |
+| signs_and_indications | 5 | 49 | 0 |
 | train_designation | 3 | 3 | 3 |
 
-## Findings (21)
+## Findings (10)
 
 - [audible_signals] seeded 8 items; brochure lists 37 total (expand before shipping)
 - [audible_signals/alarm] seeded 2/4 variants (expected until content import)
@@ -26,17 +26,6 @@ Generated: 2026-08-15T16:24:34.872Z
 - [audible_signals/pusher] seeded 2/3 variants (expected until content import)
 - [audible_signals/pusher] all variants share placeholder description
 - [foul_protection/people_equipment] all variants share placeholder description
-- [signs_and_indications] seeded 10 items; brochure lists 49 total (expand before shipping)
-- [signs_and_indications/portable] seeded 2/8 variants (expected until content import)
-- [signs_and_indications/portable] all variants share placeholder description
-- [signs_and_indications/permanent] seeded 2/18 variants (expected until content import)
-- [signs_and_indications/permanent] all variants share placeholder description
-- [signs_and_indications/temporary] seeded 2/6 variants (expected until content import)
-- [signs_and_indications/temporary] all variants share placeholder description
-- [signs_and_indications/indicators] seeded 2/8 variants (expected until content import)
-- [signs_and_indications/indicators] all variants share placeholder description
-- [signs_and_indications/warning] seeded 2/9 variants (expected until content import)
-- [signs_and_indications/warning] all variants share placeholder description
 
 ## Next steps
 

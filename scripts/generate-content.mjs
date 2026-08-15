@@ -2,6 +2,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildRailwayGroups } from './data/railway-signals-official.mjs';
+import { buildSignsGroups } from './data/signs-and-indications-official.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, '..', 'content');
@@ -97,20 +98,7 @@ const files = {
     title_ru: 'Знаки и указатели',
     title_en: 'Signs and indications',
     icon: 'Signpost',
-    groups: [
-      group('signs_and_indications', 'portable', 'Переносные сигнальные знаки', 'Portable signal signs', 'Hand', 8),
-      group('signs_and_indications', 'permanent', 'Постоянные сигнальные знаки', 'Permanent signal signs', 'MapPin', 18),
-      group('signs_and_indications', 'temporary', 'Временные сигнальные знаки', 'Temporary signal signs', 'Clock', 6),
-      group('signs_and_indications', 'indicators', 'Сигнальные указатели', 'Signal boards/indicators', 'PanelTop', 8),
-      group(
-        'signs_and_indications',
-        'warning',
-        'Постоянные предупредительные знаки',
-        'Permanent warning signs',
-        'AlertCircle',
-        9
-      ),
-    ],
+    groups: buildSignsGroups(),
   },
   foul_protection: {
     category: 'foul_protection',
@@ -232,6 +220,10 @@ Placeholder descriptions must be replaced with text verified against the officia
 ## Railway signals — DONE (2026-08-15)
 
 Official text imported from Инструкция по сигнализации (Прил. №1 к ПТЭ, Приказ №250) via \`scripts/data/railway-signals-official.mjs\`. 85 items, 0 placeholders.
+
+## Signs & indicators — DONE (2026-08-15)
+
+Official text from гл. VI (п. 58–78) via \`scripts/data/signs-and-indications-official.mjs\`. 49 items, 0 placeholders.
 
 ## Known issues from source brochures
 
