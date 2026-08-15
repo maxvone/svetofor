@@ -40,6 +40,13 @@ const trainRouteAspects = [
   ],
 ];
 
+function mirrorRouteItems(groupId, note) {
+  return trainRouteAspects.map(([suffix, title, text]) => {
+    const regulationRef = suffix === 'invitation' ? `${R}, п. 2.10` : `${R}, п. 2.8`;
+    return item(groupId, `mirror-${suffix}`, title, `${text} ${note}`, regulationRef);
+  });
+}
+
 function routeItems(groupId, { includeInvitation = true, limit } = {}) {
   const aspects = includeInvitation
     ? trainRouteAspects
@@ -178,6 +185,10 @@ export const metroSignalsOfficial = {
         'Повторительный светофор повторяет все показания основного светофора. Обозначение — номер основного светофора с табличкой одной наклонной полосы (рис. 2.21).',
         `${R}, п. 2.12`
       ),
+      ...mirrorRouteItems(
+        'povtoritelnyy',
+        'Повторительный светофор подаёт то же показание, что и основной светофор.'
+      ),
     ],
   },
 
@@ -201,6 +212,17 @@ export const metroSignalsOfficial = {
         'Включение при отказе',
         'Нормально негорящие огни резервного светофора включаются при погасании сигнальных огней на основном. Обозначение — номер основного с табличкой двух наклонных полос (рис. 2.22).',
         `${R}, п. 2.13`
+      ),
+      item(
+        'rezervnyy',
+        'normal-off',
+        'Нормально погашен',
+        'Резервный светофор в штатном режиме не горит и сигнального значения не имеет.',
+        `${R}, п. 2.13`
+      ),
+      ...mirrorRouteItems(
+        'rezervnyy',
+        'При включении резервный светофор повторяет показание основного светофора.'
       ),
     ],
   },

@@ -7,10 +7,28 @@ import { InteractiveSemaphore } from '@/components/InteractiveSemaphore';
 import { InteractiveSignal } from '@/components/InteractiveSignal';
 import { ScreenShell } from '@/components/ScreenShell';
 import { getAllDetailIds, resolveDetailTarget } from '@/content';
+import type { ContentItem } from '@/content';
 import { getInteractiveSignal, hasInteractiveSignal } from '@/content/interactive-signals';
 
 export function generateStaticParams() {
   return getAllDetailIds().map((id) => ({ id }));
+}
+
+function ContentItemCard({ entry, showTitle = true }: { entry: ContentItem; showTitle?: boolean }) {
+  const { theme } = useAppTheme();
+  const body = entry.fullDescription_ru || entry.shortDescription_ru;
+
+  return (
+    <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+      {showTitle ? (
+        <Text style={[styles.itemTitle, { color: theme.colors.text }]}>{entry.title_ru}</Text>
+      ) : null}
+      <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{body}</Text>
+      {entry.regulationRef ? (
+        <Text style={[styles.regulation, { color: theme.colors.textMuted }]}>{entry.regulationRef}</Text>
+      ) : null}
+    </View>
+  );
 }
 
 export default function DetailScreen() {
@@ -33,9 +51,6 @@ export default function DetailScreen() {
   const { group, item } = target;
   const title = item?.title_ru ?? group.title_ru;
   const interactive = hasInteractiveSignal(group.id) ? getInteractiveSignal(group.id) : undefined;
-  const description = interactive
-    ? group.summary_ru ?? ''
-    : item?.shortDescription_ru ?? group.summary_ru ?? group.items[0]?.shortDescription_ru ?? '';
 
   return (
     <ScreenShell showTrackBackground>
@@ -47,26 +62,32 @@ export default function DetailScreen() {
           ) : (
             <InteractiveSignal definition={interactive} />
           )
-        ) : (
-          <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-            <Text style={[styles.title, { color: theme.colors.text }]}>{title}</Text>
-            {group.title_en ? (
-              <Text style={[styles.subtitle, { color: theme.colors.textMuted }]}>{group.title_en}</Text>
-            ) : null}
-            <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{description}</Text>
-          </View>
-        )}
+        ) : null}
 
-        {!interactive && !item && group.items.length > 0 ? (
+        {interactive && group.summary_ru ? (
           <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-            <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>Варианты</Text>
-            {group.items.map((entry) => (
-              <View key={entry.id} style={styles.variantRow}>
-                <Text style={[styles.variantTitle, { color: theme.colors.textSecondary }]}>{entry.title_ru}</Text>
-                <Text style={[styles.variantBody, { color: theme.colors.textMuted }]}>{entry.shortDescription_ru}</Text>
-              </View>
-            ))}
+            <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{group.summary_ru}</Text>
           </View>
+        ) : null}
+
+        {!interactive && item ? <ContentItemCard entry={item} showTitle={false} /> : null}
+
+        {!interactive && !item ? (
+          <>
+            <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+              <Text style={[styles.title, { color: theme.colors.text }]}>{group.title_ru}</Text>
+              {group.title_en ? (
+                <Text style={[styles.subtitle, { color: theme.colors.textMuted }]}>{group.title_en}</Text>
+              ) : null}
+              {group.summary_ru ? (
+                <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{group.summary_ru}</Text>
+              ) : null}
+            </View>
+
+            {group.items.map((entry) => (
+              <ContentItemCard key={entry.id} entry={entry} />
+            ))}
+          </>
         ) : null}
       </ScrollView>
     </ScreenShell>
@@ -97,25 +118,18 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 12,
   },
+  itemTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
   body: {
     fontSize: 15,
     lineHeight: 22,
   },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    marginBottom: 12,
-  },
-  variantRow: {
-    marginBottom: 12,
-  },
-  variantTitle: {
-    fontSize: 15,
-    fontWeight: '600',
-  },
-  variantBody: {
-    fontSize: 13,
+  regulation: {
+    fontSize: 12,
     lineHeight: 18,
-    marginTop: 4,
+    marginTop: 10,
   },
 });
