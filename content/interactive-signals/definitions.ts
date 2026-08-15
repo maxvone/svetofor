@@ -1,4 +1,5 @@
 import { aspect, GYR_LENSES, lit, off, REGULATION } from './helpers';
+import { railwayRemainingSignals } from './railway-remaining';
 import type { InteractiveSignalDefinition } from './types';
 
 const SOURCE = `Источник: Инструкция по сигнализации (${REGULATION}).`;
@@ -76,6 +77,13 @@ export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
         [off('green'), lit('yellow'), off('red')]
       ),
       aspect(
+        'vy-green-yellow',
+        '1 зелёный + 1 жёлтый',
+        'Разрешается отправиться со станции и следовать с уменьшенной скоростью; впереди свободен один блок-участок.',
+        `${REGULATION}, п. 12, 3)`,
+        [lit('green'), lit('yellow'), off('red')]
+      ),
+      aspect(
         'vy-2yellow',
         '2 жёлтых',
         'Разрешается отправиться со станции с уменьшенной скоростью; поезд следует с отклонением по стрелочному переводу; следующий светофор закрыт.',
@@ -139,14 +147,21 @@ export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
         'pr-green',
         '1 зелёный',
         'Разрешается движение с установленной скоростью; впереди свободны два или более блок-участка.',
-        `${REGULATION}, п. 19, 1)`,
+        `${REGULATION}, п. 19, 1); п. 20, 1)`,
         [lit('green'), off('yellow'), off('red')]
+      ),
+      aspect(
+        'pr-green-yellow',
+        '1 зелёный + 1 жёлтый',
+        'Разрешается движение с уменьшенной скоростью; впереди свободен один блок-участок.',
+        `${REGULATION}, п. 20, 2)`,
+        [lit('green'), lit('yellow'), off('red')]
       ),
       aspect(
         'pr-yellow',
         '1 жёлтый',
         'Разрешается движение с готовностью остановиться; следующий светофор закрыт.',
-        `${REGULATION}, п. 19, 2)`,
+        `${REGULATION}, п. 19, 2); п. 20, 3)`,
         [off('green'), lit('yellow'), off('red')]
       ),
       aspect(
@@ -163,14 +178,28 @@ export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
     groupId: 'predupreditelnyy',
     title_ru: 'Предупредительный светофор',
     sourceNote: SOURCE,
-    lenses: [{ id: 'yellow', defaultColor: 'yellow', label_ru: 'Жёлтый' }],
+    lenses: GYR_LENSES,
     aspects: [
+      aspect(
+        'pu-green',
+        '1 зелёный (перед въездным)',
+        'Разрешается движение с установленной скоростью; въездной светофор открыт.',
+        `${REGULATION}, п. 27, 1)`,
+        [lit('green'), off('yellow'), off('red')]
+      ),
+      aspect(
+        'pu-yellow-flash',
+        '1 жёлтый мигающий (перед въездным)',
+        'Разрешается движение с установленной скоростью; въездной светофор закрыт, требуется проследование с уменьшенной скоростью.',
+        `${REGULATION}, п. 27, 2)`,
+        [off('green'), lit('yellow', true), off('red')]
+      ),
       aspect(
         'pu-yellow',
         '1 жёлтый',
-        'Разрешается движение с готовностью остановиться; основной заградительный светофор закрыт.',
-        `${REGULATION}, п. 27`,
-        [lit('yellow')]
+        'Разрешается движение с готовностью остановиться; основной заградительный или въездной светофор закрыт.',
+        `${REGULATION}, п. 27, 3)`,
+        [off('green'), lit('yellow'), off('red')]
       ),
     ],
   },
@@ -289,17 +318,26 @@ export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
     groupId: 'svetofor_prikrytiya',
     title_ru: 'Светофор прикрытия',
     sourceNote: SOURCE,
-    lenses: [{ id: 'red', defaultColor: 'red', label_ru: 'Красный' }],
+    lenses: GYR_LENSES,
     aspects: [
+      aspect(
+        'sp-green',
+        '1 зелёный',
+        'Разрешается движение с уменьшенной скоростью; путь свободен в пределах видимости.',
+        `${REGULATION}, п. 25, 1)`,
+        [lit('green'), off('yellow'), off('red')]
+      ),
       aspect(
         'sp-red',
         '1 красный',
         'Стой! Запрещается проезжать сигнал.',
-        `${REGULATION}, п. 26`,
-        [lit('red')]
+        `${REGULATION}, п. 25, 2)`,
+        [off('green'), off('yellow'), lit('red')]
       ),
     ],
   },
+
+  ...railwayRemainingSignals,
 };
 
 export function getInteractiveSignal(groupId: string): InteractiveSignalDefinition | undefined {

@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { AppHeader } from '@/components/AppHeader';
 import { useAppTheme } from '@/components/AppThemeProvider';
+import { InteractiveSemaphore } from '@/components/InteractiveSemaphore';
 import { InteractiveSignal } from '@/components/InteractiveSignal';
 import { ScreenShell } from '@/components/ScreenShell';
 import { getAllDetailIds, resolveDetailTarget } from '@/content';
@@ -41,7 +42,11 @@ export default function DetailScreen() {
       <AppHeader title={title} onBack={() => router.back()} />
       <ScrollView contentContainerStyle={styles.content}>
         {interactive ? (
-          <InteractiveSignal definition={interactive} />
+          interactive.displayKind === 'semaphore' ? (
+            <InteractiveSemaphore definition={interactive} />
+          ) : (
+            <InteractiveSignal definition={interactive} />
+          )
         ) : (
           <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
             <Text style={[styles.title, { color: theme.colors.text }]}>{title}</Text>
