@@ -3,8 +3,14 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { AppHeader } from '@/components/AppHeader';
 import { useAppTheme } from '@/components/AppThemeProvider';
+import { InteractiveSignal } from '@/components/InteractiveSignal';
 import { ScreenShell } from '@/components/ScreenShell';
-import { resolveDetailTarget } from '@/content';
+import { getAllDetailIds, resolveDetailTarget } from '@/content';
+import { getInteractiveSignal, hasInteractiveSignal } from '@/content/interactive-signals';
+
+export function generateStaticParams() {
+  return getAllDetailIds().map((id) => ({ id }));
+}
 
 export default function DetailScreen() {
   const router = useRouter();
@@ -25,30 +31,28 @@ export default function DetailScreen() {
 
   const { group, item } = target;
   const title = item?.title_ru ?? group.title_ru;
-  const description = item?.shortDescription_ru ?? group.summary_ru ?? group.items[0]?.shortDescription_ru ?? '';
-  const isPlaceholder = description.includes('будут добавлены после сверки');
+  const interactive = hasInteractiveSignal(group.id) ? getInteractiveSignal(group.id) : undefined;
+  const description = interactive
+    ? group.summary_ru ?? ''
+    : item?.shortDescription_ru ?? group.summary_ru ?? group.items[0]?.shortDescription_ru ?? '';
 
   return (
     <ScreenShell showTrackBackground>
       <AppHeader title={title} onBack={() => router.back()} />
       <ScrollView contentContainerStyle={styles.content}>
-        <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-          <Text style={[styles.title, { color: theme.colors.text }]}>{title}</Text>
-          {group.title_en ? (
-            <Text style={[styles.subtitle, { color: theme.colors.textMuted }]}>{group.title_en}</Text>
-          ) : null}
-          <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{description}</Text>
-          {group.summary_ru && !item ? (
-            <Text style={[styles.summary, { color: theme.colors.textMuted }]}>{group.summary_ru}</Text>
-          ) : null}
-          {isPlaceholder ? (
-            <Text style={[styles.pending, { color: theme.colors.textMuted }]}>
-              Текст будет дополнен после сверки с официальной Инструкцией по сигнализации.
-            </Text>
-          ) : null}
-        </View>
+        {interactive ? (
+          <InteractiveSignal definition={interactive} />
+        ) : (
+          <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+            <Text style={[styles.title, { color: theme.colors.text }]}>{title}</Text>
+            {group.title_en ? (
+              <Text style={[styles.subtitle, { color: theme.colors.textMuted }]}>{group.title_en}</Text>
+            ) : null}
+            <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{description}</Text>
+          </View>
+        )}
 
-        {!item && group.items.length > 0 ? (
+        {!interactive && !item && group.items.length > 0 ? (
           <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
             <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>Варианты</Text>
             {group.items.map((entry) => (
@@ -91,17 +95,6 @@ const styles = StyleSheet.create({
   body: {
     fontSize: 15,
     lineHeight: 22,
-  },
-  summary: {
-    fontSize: 14,
-    lineHeight: 20,
-    marginTop: 12,
-  },
-  pending: {
-    fontSize: 12,
-    fontStyle: 'italic',
-    lineHeight: 18,
-    marginTop: 12,
   },
   sectionTitle: {
     fontSize: 16,

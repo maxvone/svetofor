@@ -38,6 +38,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "export:web": "expo export -p web",
     "content:generate": "node scripts/generate-content.mjs",
     "content:validate": "node scripts/validate-content.mjs"
   },

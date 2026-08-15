@@ -103,4 +103,19 @@ export function resolveDetailTarget(id: string): {
   return undefined;
 }
 
+export function getAllDetailIds(): string[] {
+  const ids = new Set<string>();
+
+  for (const content of Object.values(categoryContentMap)) {
+    for (const group of content.groups) {
+      ids.add(group.id);
+      for (const item of group.items) {
+        ids.add(item.id);
+      }
+    }
+  }
+
+  return [...ids];
+}
+
 export * from './types';
