@@ -4,7 +4,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useAppTheme } from '@/components/AppThemeProvider';
 import { LucideIconByName } from '@/components/LucideIcon';
-import { getCategoryContent, topLevelCategories, type SignalCategory } from '@/content';
+import { getCategoryContent, topLevelCategories, encodeDetailId, type SignalCategory } from '@/content';
 
 interface CategoryAccordionProps {
   initialExpandedCategory?: SignalCategory | null;
@@ -59,7 +59,7 @@ export function CategoryAccordion({ initialExpandedCategory = null }: CategoryAc
                     onPress={() =>
                       router.push({
                         pathname: '/detail/[id]',
-                        params: { id: group.id },
+                        params: { id: encodeDetailId(category.id, group.id) },
                       })
                     }
                     accessibilityRole="button">

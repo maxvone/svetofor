@@ -7,6 +7,7 @@ import metroSignals from './metro_signals.json';
 import railwaySignals from './railway_signals.json';
 import signsAndIndications from './signs_and_indications.json';
 import trainDesignation from './train_designation.json';
+import { encodeDetailId, parseDetailId } from './detail-id';
 
 export const topLevelCategories: TopLevelCategory[] = [
   {
@@ -67,7 +68,11 @@ export function getCategoryContent(category: SignalCategory): CategoryContent {
   return categoryContentMap[category];
 }
 
-export function findGroupById(id: string): ContentGroup | undefined {
+export function findGroupById(id: string, category?: SignalCategory): ContentGroup | undefined {
+  if (category) {
+    return categoryContentMap[category]?.groups.find((entry) => entry.id === id);
+  }
+
   for (const content of Object.values(categoryContentMap)) {
     const group = content.groups.find((entry) => entry.id === id);
     if (group) return group;
@@ -75,8 +80,14 @@ export function findGroupById(id: string): ContentGroup | undefined {
   return undefined;
 }
 
-export function findItemById(id: string): { group: ContentGroup; item: ContentItem } | undefined {
-  for (const content of Object.values(categoryContentMap)) {
+export function findItemById(
+  id: string,
+  category?: SignalCategory
+): { group: ContentGroup; item: ContentItem } | undefined {
+  const categories = category ? [categoryContentMap[category]] : Object.values(categoryContentMap);
+
+  for (const content of categories) {
+    if (!content) continue;
     for (const group of content.groups) {
       const item = group.items.find((entry) => entry.id === id);
       if (item) return { group, item };
@@ -85,19 +96,21 @@ export function findItemById(id: string): { group: ContentGroup; item: ContentIt
   return undefined;
 }
 
-export function resolveDetailTarget(id: string): {
+export function resolveDetailTarget(rawId: string): {
   type: 'group' | 'item';
   group: ContentGroup;
   item?: ContentItem;
+  category: SignalCategory;
 } | undefined {
-  const group = findGroupById(id);
+  const parsed = parseDetailId(rawId);
+  const group = findGroupById(parsed.id, parsed.category);
   if (group) {
-    return { type: 'group', group };
+    return { type: 'group', group, category: group.category };
   }
 
-  const itemResult = findItemById(id);
+  const itemResult = findItemById(parsed.id, parsed.category);
   if (itemResult) {
-    return { type: 'item', group: itemResult.group, item: itemResult.item };
+    return { type: 'item', group: itemResult.group, item: itemResult.item, category: itemResult.group.category };
   }
 
   return undefined;
@@ -106,16 +119,20 @@ export function resolveDetailTarget(id: string): {
 export function getAllDetailIds(): string[] {
   const ids = new Set<string>();
 
-  for (const content of Object.values(categoryContentMap)) {
+  for (const [category, content] of Object.entries(categoryContentMap) as Array<
+    [SignalCategory, CategoryContent]
+  >) {
     for (const group of content.groups) {
-      ids.add(group.id);
+      ids.add(encodeDetailId(category, group.id));
       for (const item of group.items) {
-        ids.add(item.id);
+        ids.add(encodeDetailId(category, item.id));
       }
     }
   }
 
   return [...ids];
 }
+
+export { encodeDetailId, parseDetailId } from './detail-id';
 
 export * from './types';

@@ -48,9 +48,11 @@ export default function DetailScreen() {
     );
   }
 
-  const { group, item } = target;
+  const { group, item, category } = target;
   const title = item?.title_ru ?? group.title_ru;
-  const interactive = hasInteractiveSignal(group.id) ? getInteractiveSignal(group.id) : undefined;
+  const interactive = hasInteractiveSignal(category, group.id)
+    ? getInteractiveSignal(category, group.id)
+    : undefined;
 
   return (
     <ScreenShell showTrackBackground>

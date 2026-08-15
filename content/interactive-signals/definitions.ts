@@ -1,10 +1,12 @@
 import { aspect, GYR_LENSES, lit, off, REGULATION } from './helpers';
+import { metroInteractiveSignals } from './metro-definitions';
 import { railwayRemainingSignals } from './railway-remaining';
 import type { InteractiveSignalDefinition } from './types';
+import type { SignalCategory } from '../types';
 
 const SOURCE = `Источник: Инструкция по сигнализации (${REGULATION}).`;
 
-export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
+const railwayInteractiveSignals: Record<string, InteractiveSignalDefinition> = {
   vhodnoy: {
     groupId: 'vhodnoy',
     title_ru: 'Входной светофор',
@@ -416,10 +418,52 @@ export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
   ...railwayRemainingSignals,
 };
 
-export function getInteractiveSignal(groupId: string): InteractiveSignalDefinition | undefined {
-  return interactiveSignals[groupId];
+function withRailwayCategoryKeys(
+  signals: Record<string, InteractiveSignalDefinition>
+): Record<string, InteractiveSignalDefinition> {
+  const keyed: Record<string, InteractiveSignalDefinition> = {};
+
+  for (const [groupId, definition] of Object.entries(signals)) {
+    keyed[`railway_signals:${groupId}`] = definition;
+    keyed[groupId] = definition;
+  }
+
+  return keyed;
 }
 
-export function hasInteractiveSignal(groupId: string): boolean {
-  return groupId in interactiveSignals;
+export const interactiveSignals: Record<string, InteractiveSignalDefinition> = {
+  ...withRailwayCategoryKeys(railwayInteractiveSignals),
+  ...metroInteractiveSignals,
+};
+
+function lookupKey(category: SignalCategory | undefined, groupId: string): string | undefined {
+  if (category) {
+    const scoped = `${category}:${groupId}`;
+    if (scoped in interactiveSignals) {
+      return scoped;
+    }
+  }
+
+  if (groupId in interactiveSignals) {
+    return groupId;
+  }
+
+  const railwayScoped = `railway_signals:${groupId}`;
+  if (railwayScoped in interactiveSignals) {
+    return railwayScoped;
+  }
+
+  return undefined;
+}
+
+export function getInteractiveSignal(
+  category: SignalCategory | undefined,
+  groupId: string
+): InteractiveSignalDefinition | undefined {
+  const key = lookupKey(category, groupId);
+  return key ? interactiveSignals[key] : undefined;
+}
+
+export function hasInteractiveSignal(category: SignalCategory | undefined, groupId: string): boolean {
+  return lookupKey(category, groupId) !== undefined;
 }
