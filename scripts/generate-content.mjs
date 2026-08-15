@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildRailwayGroups } from './data/railway-signals-official.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, '..', 'content');
@@ -50,41 +51,7 @@ const files = {
     title_ru: 'Светофоры',
     title_en: 'Railway signals',
     icon: 'TrafficCone',
-    groups: [
-      group('railway_signals', 'vhodnoy', 'Входной', 'Home signal', 'Circle', 19),
-      group('railway_signals', 'vyhodnoy', 'Выходной', 'Starting signal', 'CircleDot', 31),
-      group('railway_signals', 'marshrutnyy', 'Маршрутный', 'Route signal', 'Route', 16),
-      group('railway_signals', 'priglasitelnyy', 'Пригласительный', 'Call-on signal', 'Bell', 2),
-      group('railway_signals', 'prohodnoy', 'Проходной', 'Intermediate signal', 'Minus', 13),
-      group('railway_signals', 'svetofor_prikrytiya', 'Светофор прикрытия', 'Protecting signal', 'Shield', 2),
-      group('railway_signals', 'zagraditelnyy', 'Заградительный', 'Blocking signal', 'Octagon', 2),
-      group('railway_signals', 'predupreditelnyy', 'Предупредительный', 'Distant signal', 'Triangle', 5),
-      group('railway_signals', 'povtoritelnyy', 'Повторительный', 'Repeater signal', 'Copy', 3),
-      group('railway_signals', 'lokomotivnyy', 'Локомотивный', 'Cab signal', 'Train', undefined, undefined,
-        'Локомотивная сигнализация в кабине. Не является путевым светофором. Требует сверки с Инструкцией по сигнализации.'),
-      group('railway_signals', 'vyezdnoy', 'Въездной (выездной)', 'Entry (exit) signal', 'LogIn', 2),
-      group('railway_signals', 'tekhnologicheskiy', 'Технологический', 'Industrial signal', 'Factory', 4),
-      group('railway_signals', 'manevrovyy', 'Маневровый', 'Shunting signal', 'Shuffle', 3),
-      group('railway_signals', 'gorochnyy', 'Горочный', 'Hump signal', 'TrendingUp', 7, undefined,
-        'Светофоры горочной автоматической централизации на сортировочных станциях. Значения показаний — по Инструкции (требует сверки).'),
-      group(
-        'railway_signals',
-        'nedeystvuyushchiy',
-        'Недействующий',
-        'Signal not in use',
-        'CircleOff',
-        undefined,
-        ['Недействующий светофор'],
-        'Светофоры, не используемые для текущей организации движения (временно или постоянно). Порядок оформления — по Инструкции (требует сверки).'
-      ),
-      group('railway_signals', 'semafor', 'Семафор', 'Semaphore signal', 'Flag', undefined, [
-        'Действующий семафор',
-        'Недействующий семафор',
-      ]),
-      group('railway_signals', 'pereezdnoy', 'Переездной', 'Level crossing signal', 'AlertTriangle', undefined, [
-        'Справочник сигналов переезда',
-      ], 'Справочник цветов и значений сигналов переездного светофора. Требует сверки с Инструкцией по сигнализации.'),
-    ],
+    groups: buildRailwayGroups(),
   },
   metro_signals: {
     category: 'metro_signals',
@@ -261,6 +228,10 @@ Placeholder descriptions must be replaced with text verified against the officia
 1. \`npm run content:generate\` — regenerate JSON from taxonomy script
 2. \`npm run content:validate\` — write \`content/QA-report.md\` and list gaps
 3. Replace item placeholders after verifying against the official instruction text
+
+## Railway signals — DONE (2026-08-15)
+
+Official text imported from Инструкция по сигнализации (Прил. №1 к ПТЭ, Приказ №250) via \`scripts/data/railway-signals-official.mjs\`. 85 items, 0 placeholders.
 
 ## Known issues from source brochures
 
