@@ -4,6 +4,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '@/components/AppHeader';
 import { useAppTheme } from '@/components/AppThemeProvider';
 import { InteractiveAudibleGroup } from '@/components/InteractiveAudibleGroup';
+import { InteractiveHandSignalsGroup } from '@/components/InteractiveHandSignalsGroup';
 import { InteractiveSemaphore } from '@/components/InteractiveSemaphore';
 import { InteractiveSignal } from '@/components/InteractiveSignal';
 import { ScreenShell } from '@/components/ScreenShell';
@@ -55,6 +56,7 @@ export default function DetailScreen() {
     ? getInteractiveSignal(category, group.id)
     : undefined;
   const audibleInteractive = category === 'audible_signals' && !item;
+  const handInteractive = category === 'hand_signals' && !item;
 
   return (
     <ScreenShell showTrackBackground>
@@ -70,15 +72,19 @@ export default function DetailScreen() {
 
         {audibleInteractive ? <InteractiveAudibleGroup group={group} /> : null}
 
+        {handInteractive ? <InteractiveHandSignalsGroup group={group} /> : null}
+
         {interactive && group.summary_ru ? (
           <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
             <Text style={[styles.body, { color: theme.colors.textSecondary }]}>{group.summary_ru}</Text>
           </View>
         ) : null}
 
-        {!interactive && !audibleInteractive && item ? <ContentItemCard entry={item} showTitle={false} /> : null}
+        {!interactive && !audibleInteractive && !handInteractive && item ? (
+          <ContentItemCard entry={item} showTitle={false} />
+        ) : null}
 
-        {!interactive && !audibleInteractive && !item ? (
+        {!interactive && !audibleInteractive && !handInteractive && !item ? (
           <>
             <View style={[styles.card, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
               <Text style={[styles.title, { color: theme.colors.text }]}>{group.title_ru}</Text>
